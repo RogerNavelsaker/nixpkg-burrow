@@ -9,7 +9,7 @@
   "binary": {
     "name": "burrow",
     "upstreamName": "burrow",
-    "entrypoint": "dist/index.js",
+    "entrypoint": "src/cli/main.ts",
     "aliases": [
       "bw"
     ]
