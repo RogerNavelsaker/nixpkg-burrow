@@ -1,0 +1,26 @@
+{
+  "stubbed": false,
+  "package": {
+    "repo": "burrow-cli",
+    "npmName": "@os-eco/burrow-cli",
+    "version": "0.3.15",
+    "packageRevision": 1
+  },
+  "binary": {
+    "name": "burrow",
+    "upstreamName": "burrow",
+    "entrypoint": "dist/index.js",
+    "aliases": [
+      "bw"
+    ]
+  },
+  "meta": {
+    "description": "OS-isolated sandbox runtime for coding agents",
+    "homepage": "https://github.com/jayminwest/burrow",
+    "licenseSpdx": "MIT"
+  },
+  "dist": {
+    "url": "https://registry.npmjs.org/@os-eco/burrow-cli/-/burrow-cli-0.3.15.tgz",
+    "hash": "sha512-LhlBQqS+FTDPP8X/wGG5SDWfyORF7SCQEghRQlvFG3HjPK/vOFGf5toURX/TXH3A6WPWOWRAaDoL7zjFEsSKcA=="
+  }
+}
