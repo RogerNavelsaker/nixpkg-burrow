@@ -38,7 +38,7 @@
         };
       });
     in {
-      packages = forAllSystems ({ pkgs }: {
+      packages = forAllSystems ({ pkgs, ... }: {
         default = pkgs.callPackage ./nix/package.nix { };
       });
 
