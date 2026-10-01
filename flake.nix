@@ -31,21 +31,22 @@
         "aarch64-darwin"
       ];
       forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f {
+        inherit system;
         pkgs = import nixpkgs {
           inherit system;
           overlays = [ bun2nix.overlays.default ];
         };
       });
     in {
-      packages = forAllSystems ({ pkgs }: {
+      packages = forAllSystems ({ pkgs, ... }: {
         default = pkgs.callPackage ./nix/package.nix { };
       });
 
-      devShells = forAllSystems ({ pkgs }: {
+      devShells = forAllSystems ({ pkgs, system }: {
         default = pkgs.mkShell {
           packages = with pkgs; [
             bun
-            bun2nix
+            bun2nix.packages.${system}.default
             jq
             nixfmt-rfc-style
           ];
